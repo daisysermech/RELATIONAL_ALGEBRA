@@ -555,7 +555,7 @@ namespace RELATIONAL_ALGEBRA
             for (int i = Headers ? 1 : 0; i < Range.GetLength(0) - 1; i++)
                 for (int h = i + 1; h < Range.GetLength(0); h++)
                     if (COMPARE_ROWS(Range, i, Range, h))
-                        Range = TRIM_ARRAY(h, Range);
+                        Range = TRIM_ARRAY(h--, Range);
 
             return Range;
         }
